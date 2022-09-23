@@ -3,7 +3,7 @@
 ```sh
 # configure rpc endpoint
 export INFURA_PROJECT_ID="..."
-or
+# or
 export ETHEREUM_RPC="http:/..."
 
 # run tests
