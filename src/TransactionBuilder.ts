@@ -52,6 +52,11 @@ export class TransactionBuilder {
             }, { common, freeze: false }) as any;
         }
 
+        // const sender = transaction.getSenderAddress();
+        // console.log({
+        //     sender,
+        // });
+
         return transaction;
     }
 }

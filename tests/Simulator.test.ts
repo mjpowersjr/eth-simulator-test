@@ -51,7 +51,7 @@ describe('Simulator', () => {
         // summarize(result);
 
         assertIsPostByzantiumTxReceipt(result.receipt);
-        // expect(result.receipt.cumulativeBlockGasUsed).toEqual(46637n);
+        expect(result.receipt.cumulativeBlockGasUsed).toEqual(46637n);
         expect(result.receipt.status).toEqual(1);
         expect(result.receipt.logs.length).toEqual(1);
     }, timeout)
@@ -65,21 +65,21 @@ describe('Simulator', () => {
         // summarize(result);
 
         assertIsPostByzantiumTxReceipt(result.receipt);
-        expect(result.receipt.cumulativeBlockGasUsed).toEqual(69529n);
+        expect(result.receipt.cumulativeBlockGasUsed).toEqual(63209n);
         expect(result.receipt.status).toEqual(1);
         expect(result.receipt.logs.length).toEqual(1);
     }, timeout)
 
     it('simulate existing complex txn', async () => {
         const result = await simulator.simulateExistingTxn(
-            '0x80728928c158510863630fda3563024afc47da611ec20f9897ac27236e81dfb3'
+            '0x91e41ec8ce9d36df308ecb0702009bd22e8bf56e9387102a7b0a9445ebcd8311'
         );
         // summarize(result);
 
         assertIsPostByzantiumTxReceipt(result.receipt);
-        // expect(result.receipt.cumulativeBlockGasUsed).toEqual(69529n);
+        expect(result.receipt.cumulativeBlockGasUsed).toEqual(371382n);
         expect(result.receipt.status).toEqual(1);
-        expect(result.receipt.logs.length).toEqual(13);
+        expect(result.receipt.logs.length).toEqual(12);
     }, timeout)
 
 
